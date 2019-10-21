@@ -1,0 +1,28 @@
+---
+gitstrap:
+    version: v1
+    github:
+        repo:
+            name: go-vendor-releaser
+            description: "Tool to vendor go sources in Girhub release"
+            private: false
+            hooks:
+                - url: "http://p.rehttp.net/http://www.0pdd.com/hook/github"
+                  type: form
+                  events:
+                      - push
+                  active: true
+            collaborators:
+                - "rultor"
+                - "0pdd"
+    templates:
+        - name: "README.md"
+          url: "https://raw.githubusercontent.com/g4s8/gitstrap/master/templates/README.md"
+        - name: "LICENSE"
+          url: "https://raw.githubusercontent.com/g4s8/gitstrap/master/templates/LICENSE.mit"
+    params:
+        rultor: true
+        travis: true
+        pdd: true
+        license: MIT
+
